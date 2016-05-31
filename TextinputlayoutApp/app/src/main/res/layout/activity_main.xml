@@ -3,15 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#e3e3e3"
     android:orientation="vertical"
     android:padding="@dimen/activity_horizontal_margin"
-    tools:context=".MainActivity">
+    tools:context=".TextInputLayoutActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.5"
+        android:layout_weight="0.2"
         android:orientation="vertical">
 
         <TextView
@@ -35,13 +36,14 @@
             android:id="@+id/user_id_wrapper"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="input id">
+            app:hintTextAppearance="@style/TextNormalAppearance"
+            android:layout_marginBottom="20dp">
 
             <EditText
                 android:id="@+id/user_id"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
+                android:hint="input id"
                 android:inputType="textEmailAddress" />
 
         </android.support.design.widget.TextInputLayout>
@@ -50,13 +52,14 @@
             android:id="@+id/user_password_wrapper"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="input password">
+            app:hintTextAppearance="@style/TextErrorAppearance"
+            android:layout_marginBottom="10dp">
 
             <EditText
                 android:id="@+id/user_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
+                android:hint="input password"
                 android:inputType="textPassword" />
 
         </android.support.design.widget.TextInputLayout>
